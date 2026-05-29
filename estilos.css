@@ -1,0 +1,180 @@
+/* Configuración General y Tipografías (Tema 10) */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado con Degradados Avanzados (Tema 22) y Sombras (Tema 8) */
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Menú de Navegación usando Flexbox sin dolor (Tema 13) */
+nav {
+    background-color: #111;
+    position: sticky; /* Posicionamiento (Tema 14) */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background 0.3s ease; /* Transiciones (Tema 18) */
+}
+
+/* Efecto hover en los enlaces (Tema 3) */
+nav ul li a:hover {
+    background-color: #00c3ff;
+    color: #111;
+}
+
+/* Contenedor Principal y Tarjetas con Bordes Redondeados (Tema 7) y Sombras (Tema 8) */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+.card h2 {
+    color: #2c5364;
+    border-bottom: 3px solid #00c3ff;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* Distribución de contenido de IA con Flexbox (Tema 13) */
+.content-split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-split p {
+    flex: 1 1 400px;
+}
+
+/* Zona Interactiva y Formularios (Tema 16) */
+.interactive-zone {
+    flex: 1 1 300px;
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.interactive-zone form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.interactive-zone input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Validación visual rápida en formularios */
+.interactive-zone input:invalid:focus {
+    border-color: #e53e3e;
+}
+
+.interactive-zone button {
+    background-color: #2c5364;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s; /* Transformación (Tema 15) */
+}
+
+.interactive-zone button:hover {
+    transform: scale(1.05); /* Efecto de agrandado leve */
+    background-color: #00c3ff;
+    color: #111;
+}
+
+/* Columnas de Texto para Computación Gráfica (Tema 19) */
+.text-columns {
+    column-count: 2; /* Divide el texto en dos columnas */
+    column-gap: 30px; /* Espacio entre columnas */
+    column-rule: 1px dashed #cbd5e0; /* Línea divisoria */
+    margin-bottom: 20px;
+}
+
+/* Demo de Gráficos SVG (Tema 24) */
+.graphics-demo {
+    text-align: center;
+    background: #1a202c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.graphics-demo svg {
+    margin-top: 10px;
+    animation: pulse 3s infinite alternate; /* Animaciones (Tema 23) */
+}
+
+/* Definición de una animación CSS3 (Tema 23) */
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* Adaptación a dispositivos móviles / Media Queries (Tema 26) */
+@media (max-width: 768px) {
+    .text-columns {
+        column-count: 1; /* En móviles vuelve a una sola columna */
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
